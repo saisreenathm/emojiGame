@@ -25,7 +25,7 @@ const WinOrLoseCard = ({currentScore, startOver}) => {
         </button>
       </div>
       <div className="image-container">
-        <img className="win-icon" src={gameUrl} alt="game" />
+        <img className="win-icon" src={gameUrl} alt={isWin ? `win` : `lose`} />
       </div>
     </div>
   )
