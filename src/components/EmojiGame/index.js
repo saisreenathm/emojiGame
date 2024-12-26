@@ -9,15 +9,44 @@ Quick Tip
 
 import {Component} from 'react'
 import NavBar from '../NavBar'
+import EmojiCard from '../EmojiCard'
+import WinOrLoseCard from '../WinOrLoseCard'
 import './index.css'
 
-// Write your code here.
 class EmojiGame extends Component {
   state = {
     score: 0,
     clickedEmojis: [],
     topScore: 0,
-    gameStatus: '',
+    gameStatus: true,
+  }
+
+  handleOnClick = emoji => {
+    this.setState(prevState => {
+      const {clickedEmojis, score, topScore} = prevState
+      if (clickedEmojis.filter(each => each.id === emoji.id).length >= 1) {
+        console.log('Game Over')
+        return {
+          topScore: topScore < score ? score : topScore,
+          clickedEmojis: [],
+          gameStatus: false,
+        }
+      }
+      const gameStatus = score !== 11
+      return {
+        score: score + 1,
+        clickedEmojis: [...clickedEmojis, emoji],
+        gameStatus,
+      }
+    })
+  }
+
+  startOver = () => {
+    this.setState({
+      score: 0,
+      clickedEmojis: [],
+      gameStatus: true,
+    })
   }
 
   shuffledEmojisList = () => {
@@ -26,12 +55,25 @@ class EmojiGame extends Component {
   }
 
   render() {
-    const {score, clickedEmojis, topScore, gameStatus} = this.state
+    const {score, topScore, gameStatus} = this.state
+    const currentEmojiList = this.shuffledEmojisList()
 
-    console.log('Shuffled: ', this.shuffledEmojisList())
     return (
       <div className="bg-container">
         <NavBar score={score} topScore={topScore} />
+        {gameStatus ? (
+          <ul className="game-container">
+            {currentEmojiList.map(emoji => (
+              <EmojiCard
+                key={emoji.id}
+                item={emoji}
+                handleOnClick={this.handleOnClick}
+              />
+            ))}
+          </ul>
+        ) : (
+          <WinOrLoseCard currentScore={score} startOver={this.startOver} />
+        )}
       </div>
     )
   }

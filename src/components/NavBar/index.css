@@ -9,7 +9,7 @@
   max-height: max-content;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-image: linear-gradient(to right, #9796f0, #fbc7d4);
+  background-image: linear-gradient(to right, #d8e9ff24, #fbc7d4);
 }
 ul {
   display: flex;

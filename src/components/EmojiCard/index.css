@@ -1,1 +1,23 @@
-/* Write your code here. */
+.li-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b7abe6;
+  border-radius: 15px;
+  padding: 2%;
+  border: 1px solid #ffffff30;
+  margin: 2px;
+}
+.li-container:hover {
+  background-color: transparent;
+  transition: all 0.4s ease;
+}
+.emoji {
+  width: 90px;
+  height: 90px;
+}
+.li-btn {
+  padding: 1%;
+  background-color: transparent;
+  border: none;
+}

@@ -2,7 +2,15 @@
   display: flex;
   color: white;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
   background-image: linear-gradient(to bottom right, #9796f0, #fbc7d4);
+}
+.game-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2%;
+  width: 80%;
 }
