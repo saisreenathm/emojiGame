@@ -1,1 +1,42 @@
 /* Write your code here. */
+.nav-bar {
+  flex-grow: 1;
+  display: flex;
+  color: white;
+  padding: 2%;
+  width: 100%;
+  align-items: center;
+  max-height: max-content;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-image: linear-gradient(to right, #9796f0, #fbc7d4);
+}
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+li {
+  list-style: none;
+  font-size: 0.6em;
+  min-width: 60px;
+  margin-right: auto;
+  margin: 1%;
+}
+.nav-icon {
+  height: 25px;
+  width: 25px;
+  margin: 2px;
+}
+.nav-heading {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 1rem;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
