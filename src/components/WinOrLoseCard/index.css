@@ -19,6 +19,11 @@
   border-radius: 1em;
   border: 1px solid #ffffff30;
 }
+@media screen and (max-width: 769px) {
+  .card {
+    flex-direction: column;
+  }
+}
 .image-container {
   width: 80%;
   display: flex;
@@ -38,4 +43,7 @@
 .win-heading {
   font-size: 3em;
   text-align: center;
+}
+.p {
+  font-size: 1.4em;
 }

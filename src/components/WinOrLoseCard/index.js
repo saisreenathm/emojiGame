@@ -13,7 +13,9 @@ const WinOrLoseCard = ({currentScore, startOver}) => {
   return (
     <div className="card">
       <div className="text-elements">
-        <h1 className="win-heading">You {isWin ? `Win` : `Lose`}</h1>
+        <h1 className="win-heading">{`You ${isWin ? `Win` : `Lose`}`}</h1>
+        <p className="p">{isWin ? `Best Score` : ``}</p>
+        <p className="p">{`${currentScore}/12`}</p>
         <button
           className="play-again-btn"
           type="button"

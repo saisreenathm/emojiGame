@@ -12,10 +12,10 @@ const NavBar = ({score, topScore}) => {
         />
         <h1 className="nav-heading">Emoji Game</h1>
       </div>
-      <ul>
-        <li>Score: {score}</li>
-        <li>Top Score: {topScore}</li>
-      </ul>
+      <div>
+        <p>{`Score: ${score}`}</p>
+        <p>{`Top Score: ${topScore}`}</p>
+      </div>
     </nav>
   )
 }

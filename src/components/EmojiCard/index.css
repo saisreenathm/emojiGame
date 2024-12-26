@@ -8,6 +8,12 @@
   border: 1px solid #ffffff30;
   margin: 2px;
 }
+@media screen and (min-width: 769px) {
+  .li-container {
+    padding: 5%;
+    margin: 3%;
+  }
+}
 .li-container:hover {
   background-color: transparent;
   transition: all 0.4s ease;

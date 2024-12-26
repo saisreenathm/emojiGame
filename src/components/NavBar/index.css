@@ -11,19 +11,19 @@
   justify-content: space-between;
   background-image: linear-gradient(to right, #d8e9ff24, #fbc7d4);
 }
-ul {
+div {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-li {
-  list-style: none;
-  font-size: 0.6em;
-  min-width: 60px;
+p {
+  font-size: 0.8em;
+  min-width: fit-content;
   margin-right: auto;
-  margin: 1%;
+  font-weight: 700;
+  margin: 3%;
 }
 .nav-icon {
   height: 25px;
