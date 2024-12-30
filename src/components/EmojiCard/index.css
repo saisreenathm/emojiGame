@@ -10,8 +10,12 @@
 }
 @media screen and (min-width: 769px) {
   .li-container {
-    padding: 5%;
+    padding: 2%;
     margin: 3%;
+  }
+  .emoji {
+    width: 9em;
+    height: 9em;
   }
 }
 .li-container:hover {
